@@ -1,7 +1,7 @@
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:chat_gpt_sdk/chat_gpt_sdk.dart';
+import 'package:chatgpt/auth/secrets.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -30,7 +30,7 @@ class _ChatScreenState extends State<ChatScreen> {
 
     // Link for api - https://beta.openai.com/account/api-keys
     chatGPT = ChatGPT.instance.builder(
-      "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",
+      mySecretKey,
       baseOption: HttpSetup(receiveTimeout: 6000),
     );
   }
